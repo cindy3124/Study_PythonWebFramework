@@ -1,0 +1,12 @@
+
+创建项目：
+f:
+cd F:\msysgit\Study_PythonWebFramework\4.Environment_Demo_web and django
+
+django-admin startproject 项目名
+
+
+启动服务：
+
+cd 项目名
+python manage.py runserver 端口
