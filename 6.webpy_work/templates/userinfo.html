@@ -1,0 +1,25 @@
+﻿$def with(name)
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+    您好，$:name,请修改您的个人信息</br>
+    <form action='/perfectuserinfo' method='POST'  target="_self" enctype="multipart/form-data">
+        <li><input name="name" type="text" placeholder="姓名"></li>
+        <li><input name="sex" id="man"   type="radio" checked="checked" />男
+            <input name="sex" id="woman" type="radio" />女</li>
+        <li><input name="birthday" type="text" placeholder="生日"></li>
+        <li><input name="address" type="text" placeholder="住址"></li>
+        <li><input name="hobbies" type="text" placeholder="爱好"></li>
+
+        <li><input name="headimage" type="file" placeholder="头像"></li>
+        <li><input name="photo" type="file" placeholder="照片"></li>
+
+        <li><input name="introduce" type="text" placeholder="个人介绍"></li>
+        <input type="submit" value="保存" />
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+$def with(scount)
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册系统</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div>
+
+        <form action='/login' method='POST'  target="_self">
+            <li><input name="username" type="text" placeholder="用户名"></li>
+            <li><input name="password" type="text" placeholder="密码"></li>
+            <input type="submit" value="登录" />
+        </form>
+
+        <a href='/regpage'><button id="register">注册</button></a>
+
+        <a id="findout" href='/findpassword'>忘记密码？</a>
+
+        <a>第【$:scount】次刷新</a>
+
+    </div>
+</body>
+</html>
