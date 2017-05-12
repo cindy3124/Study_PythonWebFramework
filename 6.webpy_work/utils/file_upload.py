@@ -21,7 +21,7 @@ def save_file():
         filename = filepath.split('/')[-1]  # splits the and chooses the last part (the filename with extension)
         ext = filename.split('.',1)[1]  # 获取后缀名
         now = datetime.now()
-        t = '%d%d%d%d%d%d'%(now.year, now.month, now.day ,now.hour ,now.minute ,now.second)
+        t = 'headimage_%d%d%d%d%d%d'%(now.year, now.month, now.day ,now.hour ,now.minute ,now.second)
         filename =t+'.'+ext
         filename = filename.decode('utf-8')  ##decoding for windows file name
         print filename
@@ -35,7 +35,7 @@ def save_file():
         filename = filepath.split('/')[-1]  # splits the and chooses the last part (the filename with extension)
         ext = filename.split('.',1)[1]  # 获取后缀名
         now = datetime.now()
-        t = '%d%d%d%d%d%d'%(now.year, now.month, now.day ,now.hour ,now.minute ,now.second)
+        t = 'photo_%d%d%d%d%d%d'%(now.year, now.month, now.day ,now.hour ,now.minute ,now.second)
         filename =t+'.'+ext
         filename = filename.decode('utf-8')  ##decoding for windows file name
         print filename

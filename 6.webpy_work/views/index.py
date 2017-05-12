@@ -11,10 +11,16 @@ from utils.sendmail import *
 # ===========================================================
 class index:
     def GET(self):
-        session = web.config._session
-        session.count += 1
-        scount = str(session.count)
-        return render.index(scount)
+        loginid = web.cookies().get('id')
+        rslist = getUserByUserId(loginid)
+        if len(rslist) == 0:
+            session = web.config._session
+            session.count += 1
+            scount = str(session.count)
+            return render.index(scount)
+        else:
+            name = rslist[0].name
+            raise web.seeother('/login')
     def POST(self):
         return self.GET()
 
@@ -44,6 +50,11 @@ class login:
                 return render.welcome(username)
             else:
                 return 'password error'
+
+    def GET(self):
+        username = web.cookies().get('name')
+        print username
+        return render.welcome(username)
 
 class regpage:
     def GET(self):

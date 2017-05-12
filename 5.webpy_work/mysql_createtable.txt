@@ -1,4 +1,4 @@
-CREATE TABLE `NewTable` (
+CREATE TABLE `login_info` (
 `id`  int(11) NOT NULL AUTO_INCREMENT ,
 `name`  char(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '”√ªß√˚' ,
 `password`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '√‹¬Î' ,
